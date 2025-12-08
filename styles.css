@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #bc6c25;
-}
 
 .Top{
     height: auto;
@@ -14,10 +12,10 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: #dda15e;
+    background-color: #f9ee99;
 }
 .button{
-    background-color: #dda15e;
+    background-color: ;
 }
 #button{
     border-radius: 0.6rem;
@@ -27,7 +25,13 @@
     margin: 2rem;
     background-color: #fefae0;
     font-size: 1em;
+    outline: solid black 1px;
+
 }
+#button:hover{
+    background-color: red ;
+}
+
 .title{
     background-color: #dda15e;
     display: flex;
@@ -47,7 +51,7 @@
 .container{
 
     width: 100%;
-    background-color: #283618;
+    background-color: #f9ee99;
 }
 
 
@@ -58,8 +62,12 @@
     height: 75vh;
     max-width: 40rem;
     margin: auto;
-    border: 2px solid #283618;
-    background-color: #fefae0;
+    outline: 2px solid #283618;
+    background-color: #faf9f6;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .Bottom{
@@ -74,6 +82,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: 3vh;
 }
 .name{
     font-weight: 800;
