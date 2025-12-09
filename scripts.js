@@ -1,5 +1,4 @@
 grid=document.getElementById("grid")
-colors=["skyBlue","Blue","red","pink","yellow","lightYellow"]
 button=document.getElementById("button")
 buttonBox=document.querySelector(".buttons")
 inputdiv=document.createElement("div")
@@ -48,6 +47,8 @@ const createDivs = function(numOfBoxes){
     while (grid.firstChild){
         grid.removeChild(grid.firstChild)
     }
+
+    
     rectangleOfGrid= grid.getBoundingClientRect()
     widthOfGrid= rectangleOfGrid.width
     heightOfGrid= rectangleOfGrid.height
@@ -58,11 +59,18 @@ const createDivs = function(numOfBoxes){
 
     for(let i = 0; i<numOfBoxes;i++){
          let div = document.createElement("div")
-            div.style.height= `${sideOfBox}px`
+            div.style.height= `${sideOfBox}px` 
             div.style.width= sideOfBox+"px"
-            div.style.backgroundColor = "maroon"
+            div.style.opacity="0.1"
             div.addEventListener("mouseenter", ()=>{
-                div.style.backgroundColor= colors[Math.floor(Math.random()*colors.length)]
+                red = Math.floor(Math.random()*255)
+                green = Math.floor(Math.random()*255)
+                blue= Math.floor(Math.random()*255)
+                div.style.backgroundColor= `rgb(${red},${green},${blue})`
+                styles= getComputedStyle(div)
+                opacity=styles.opacity
+                div.style.opacity=Number(opacity)+0.05
+
             })
             grid.append(div)
     }
